@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fraeno | Catch dangerous robot behavior before deployment</title>
+    <meta
+      name="description"
+      content="Fraeno catches software changes that make robots behave dangerously."
+    />
+    <link rel="canonical" href="https://fraeno.com/" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="/assets/inter-tight-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fraeno-hero-poster-fd73bfa6.jpg"
+      as="image"
+      type="image/jpeg"
+      fetchpriority="high"
+    />
+    <meta name="theme-color" content="#d8d7d3" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Catch dangerous robot behavior before deployment."
+    />
+    <meta
+      property="og:description"
+      content="Fraeno is the security gate between a software update and the robot. It catches changes that make the robot behave dangerously."
+    />
+    <meta property="og:url" content="https://fraeno.com/" />
+    <meta
+      property="og:image"
+      content="https://fraeno.com/assets/social-card-16fc030d.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Fraeno beside a robot arm with the words Catch dangerous robot behavior before deployment."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Catch dangerous robot behavior before deployment."
+    />
+    <meta
+      name="twitter:description"
+      content="Fraeno is the security gate between a software update and the robot. It catches changes that make the robot behave dangerously."
+    />
+    <meta
+      name="twitter:image"
+      content="https://fraeno.com/assets/social-card-16fc030d.jpg"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Fraeno",
+        "url": "https://fraeno.com/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Ubuntu 22.04",
+        "description": "Fraeno catches software changes that make robots behave dangerously."
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css?v=physics-waitlist-2" />
+    <script src="/site.js?v=physics-waitlist-1" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="wordmark" href="/" aria-label="Fraeno home">fraeno</a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        data-menu-button
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="primary-navigation" aria-label="Primary navigation" data-navigation>
+        <a href="#why">Why it matters</a>
+        <a href="#action">Fraeno in action</a>
+        <a
+          href="https://github.com/deepubuntu/fraeno-demo-robot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Try the demo</a>
+        <button class="nav-action" type="button" data-contact-open>
+          Request access
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" data-hero>
+        <div class="hero-visual" data-hero-visual aria-hidden="true">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="/assets/fraeno-hero-poster-fd73bfa6.jpg"
+            disablepictureinpicture
+            disableremoteplayback
+            data-hero-video
+          >
+            <source src="/assets/fraeno-hero-loop-952e20e2.mp4" type="video/mp4" />
+          </video>
+          <img
+            class="hero-poster"
+            src="/assets/fraeno-hero-poster-fd73bfa6.jpg"
+            alt=""
+            width="1104"
+            height="720"
+          />
+        </div>
+
+        <div class="hero-grid section-shell">
+          <div class="hero-heading">
+            <h1 data-hero-item>
+              Catch catastrophic robot behavior before deployment.
+            </h1>
+            <div class="hero-support" data-hero-item>
+              <p class="plain-language">
+                <em>essentially, dependabot for robots + a security gate before deployment.</em>
+              </p>
+              <a class="round-link" href="#action">
+                <span>See Fraeno in action</span>
+                <i aria-hidden="true">→</i>
+              </a>
+              <a class="hero-waitlist-link" href="#physics-waitlist">Join the physics checks waitlist →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-word" aria-hidden="true">fraeno</div>
+
+        <div class="hero-footer section-shell" data-hero-item>
+          <span>Safer robot updates</span>
+          <span>Built for ROS 2</span>
+          <span>Illustrative hardware</span>
+        </div>
+      </section>
+
+      <section class="system-intro section-shell" id="why">
+        <p class="section-number" data-reveal>01</p>
+        <div class="system-copy" data-reveal>
+          <p class="section-label">Why it matters</p>
+          <h2>
+            A bad update can make a robot move the wrong way, fail to stop, or become dangerous
+            to people.
+          </h2>
+        </div>
+        <div class="system-media" data-reveal>
+          <div class="system-film" aria-hidden="true">
+            <video
+              muted
+              loop
+              playsinline
+              preload="none"
+              poster="/assets/robot-system-poster.webp?v=22eddc0b"
+              data-section-video
+            >
+              <source src="/assets/robot-system-loop.mp4?v=e7e40370" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <p class="system-outcome" data-reveal>
+          Fraeno catches software changes that make robots behave dangerously.
+        </p>
+      </section>
+
+      <section class="proof" id="method" data-proof>
+        <div class="proof-stage">
+          <div class="proof-image" aria-hidden="true">
+            <img
+              src="/assets/fraeno-robot-arm.webp"
+              alt=""
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="proof-inner section-shell">
+            <div class="proof-heading" data-reveal>
+              <p>How it works</p>
+              <h2
+                class="proof-moments"
+                aria-label="Fraeno is the security gate between a software update and the robot. It catches changes that make the robot behave dangerously."
+              >
+                <span class="proof-moment is-active" data-proof-moment>
+                  Fraeno is the security gate
+                </span>
+                <span class="proof-moment is-next" data-proof-moment>
+                  between a software update and the robot.
+                </span>
+                <span class="proof-moment" data-proof-moment>
+                  It catches changes that make the robot behave dangerously.
+                </span>
+              </h2>
+            </div>
+
+            <div class="proof-result">
+              <div
+                class="trace"
+                aria-label="Example: an update breaks sensor delivery, the controller stops sending commands, and Fraeno blocks the update"
+                data-trace
+              >
+                <div class="trace-node">
+                  <span>Driver update</span>
+                  <strong>Changed sensor delivery</strong>
+                </div>
+                <div class="trace-line trace-line-live" aria-hidden="true"><span></span></div>
+                <div class="trace-node">
+                  <span>Controller</span>
+                  <strong>Stopped sending commands</strong>
+                </div>
+                <div class="trace-line trace-line-broken" aria-hidden="true"></div>
+                <div class="trace-node">
+                  <span>Fraeno</span>
+                  <strong>Blocked the update</strong>
+                </div>
+              </div>
+
+              <div class="proof-footer">
+                <div>
+                  <span>Before deployment</span>
+                  <strong>Bad update blocked</strong>
+                </div>
+                <a
+                  href="https://github.com/Thabhelo/fraeno-demo-trial/actions/runs/32513414015"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  See a real Fraeno check
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="method section-shell" aria-labelledby="method-title">
+        <header data-reveal>
+          <p class="section-number">02</p>
+          <div>
+            <p class="section-label">A safe place for the robot</p>
+            <h2 id="method-title">Try the update away from the real robot.</h2>
+            <p class="method-summary">
+              Fraeno runs the existing and updated robot software in isolated environments. It
+              compares the behavior you configure without running the test on physical hardware.
+            </p>
+          </div>
+        </header>
+
+        <ol class="method-steps">
+          <li data-step>
+            <span>01</span>
+            <strong>Find the update</strong>
+          </li>
+          <li data-step>
+            <span>02</span>
+            <strong>Set up an isolated test environment</strong>
+          </li>
+          <li data-step>
+            <span>03</span>
+            <strong>Run the existing and updated software</strong>
+          </li>
+          <li data-step>
+            <span>04</span>
+            <strong>Detect and block observed regressions</strong>
+          </li>
+        </ol>
+      </section>
+
+      <section class="action section-shell" id="action" aria-labelledby="action-title">
+        <header data-reveal>
+          <p class="section-number">03</p>
+          <div>
+            <h2 id="action-title">See Fraeno in action.</h2>
+          </div>
+        </header>
+
+        <div class="action-window" data-reveal>
+          <div class="action-window-bar" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <video
+            class="action-video"
+            src="/assets/fraeno-demo-reel.mp4"
+            poster="/assets/fraeno-demo-poster.jpg"
+            muted
+            loop
+            playsinline
+            preload="none"
+            aria-label="Fraeno demo reel: existing and updated robot software run separately, their observed behavior is compared, and a regression blocks the update."
+          ></video>
+        </div>
+      </section>
+
+      <section class="availability section-shell" id="coverage" data-reveal>
+        <p>Supported systems</p>
+        <div class="availability-list">
+          <span>ROS 2 Humble</span>
+          <span>Ubuntu 22.04</span>
+          <span>amd64</span>
+          <span>GitHub App</span>
+        </div>
+        <small>
+          Fraeno checks the robot actions you choose. It cannot promise every possible action is
+          safe.
+        </small>
+      </section>
+
+      <section class="coming-soon section-shell" id="physics" aria-labelledby="physics-title" data-reveal>
+        <p class="section-label">Coming soon</p>
+        <div>
+          <h2 id="physics-title">Physics checks for robot updates.</h2>
+          <p>
+            We want to test physical limits such as momentum and torque, and check that a robot
+            stops when its emergency stop is triggered. That will require an accurate robot model,
+            motion and force measurements from a simulator, and tests that fail when evidence is
+            missing.
+          </p>
+          <p>
+            These checks are in development. Today, Fraeno compares software-visible behavior;
+            it does not verify physical limits or certify that a robot is safe.
+          </p>
+          <form class="physics-waitlist" id="physics-waitlist" data-physics-waitlist novalidate>
+            <h3>Want to try physics checks when they are ready?</h3>
+            <p>Join the waitlist. We will email you about this feature when there is something to try.</p>
+            <input class="contact-trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <label for="physics-waitlist-email">Work email</label>
+            <div class="physics-waitlist-fields">
+              <input id="physics-waitlist-email" type="email" name="email" required maxlength="254" autocomplete="email" />
+              <button type="submit">Join waitlist <span aria-hidden="true">→</span></button>
+            </div>
+            <small>Only updates about physics checks. <a href="/privacy.html">Privacy</a></small>
+            <p class="physics-waitlist-status" data-physics-waitlist-status role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="closing" id="access">
+        <div class="closing-inner section-shell" data-reveal>
+          <p>Fraeno</p>
+          <h2>Protect the robot from dangerous software updates.</h2>
+          <div class="closing-actions">
+            <button class="install-link" type="button" data-contact-open>
+              Request access
+              <span aria-hidden="true">→</span>
+            </button>
+            <a
+              class="install-link is-secondary"
+              href="https://github.com/deepubuntu/fraeno-demo-robot"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Try the demo robot
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="footer-glow" aria-hidden="true"></div>
+
+      <div class="footer-main">
+        <div class="footer-about" data-reveal>
+          <a class="wordmark" href="/" aria-label="Fraeno home">fraeno</a>
+          <p>Fraeno catches software changes that make robots behave dangerously.</p>
+          <p class="footer-note">
+            <em>essentially, dependabot for robots + a security gate before deployment.</em>
+          </p>
+          <small>
+            <img
+              class="footer-mark"
+              src="assets/favicon-32.png"
+              alt=""
+              width="14"
+              height="14"
+            />
+            © 2026 DeepUbuntu Labs
+          </small>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation" data-reveal>
+          <div>
+            <span>Explore</span>
+            <a href="#why">Why it matters</a>
+            <a href="#action">Fraeno in action</a>
+          </div>
+          <div>
+            <span>Get started</span>
+            <a
+              href="https://github.com/deepubuntu/fraeno-demo-robot"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Try the demo</a>
+            <button type="button" data-contact-open>Request access</button>
+            <a href="/privacy.html">Privacy</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-word" aria-hidden="true">
+        <svg viewBox="0 0 1000 230" preserveAspectRatio="none" role="presentation">
+          <text x="0" y="225" textLength="1000" lengthAdjust="spacingAndGlyphs">fraeno</text>
+        </svg>
+      </div>
+    </footer>
+
+    <div class="contact-overlay" data-contact-overlay hidden>
+      <section
+        class="contact-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-title"
+      >
+        <button class="contact-close" type="button" data-contact-close aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p class="contact-kicker">Fraeno</p>
+        <h2 id="contact-title">Request access</h2>
+        <p class="contact-support">Tell us about your robots.</p>
+        <form data-contact-form novalidate>
+          <input
+            class="contact-trap"
+            type="text"
+            name="website"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          />
+          <label>
+            Name
+            <input type="text" name="name" required maxlength="120" autocomplete="name" />
+          </label>
+          <label>
+            Work email
+            <input type="email" name="email" required maxlength="254" autocomplete="email" />
+          </label>
+          <label>
+            GitHub username
+            <input
+              type="text"
+              name="github"
+              required
+              maxlength="39"
+              autocomplete="username"
+              autocapitalize="none"
+              spellcheck="false"
+            />
+          </label>
+          <label>
+            Company
+            <input type="text" name="company" maxlength="200" autocomplete="organization" />
+          </label>
+          <label>
+            What are you deploying?
+            <textarea name="message" maxlength="4000" rows="4"></textarea>
+          </label>
+          <label class="contact-consent">
+            <input type="checkbox" name="updates" />
+            <span>Keep me posted on Fraeno updates</span>
+          </label>
+          <button class="contact-submit" type="submit">
+            Send request
+            <span aria-hidden="true">→</span>
+          </button>
+          <p class="contact-status" data-contact-status role="status"></p>
+          <a
+            class="contact-book"
+            data-contact-book
+            href="https://calendar.app.google/fB6AtdB5FVSs8YoA9"
+            target="_blank"
+            rel="noopener noreferrer"
+            hidden
+          >
+            Want to talk sooner? Book a call
+            <span aria-hidden="true">→</span>
+          </a>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

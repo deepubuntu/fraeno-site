@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Fraeno operations</title>
+    <link rel="stylesheet" href="/admin/admin.css?v=20260817a" />
+  </head>
+  <body>
+    <header class="admin-header" data-admin-header hidden>
+      <a class="wordmark" href="/">fraeno</a>
+      <p>Operations</p>
+      <button class="text-button" data-sign-out hidden>Sign out</button>
+    </header>
+
+    <main>
+      <section class="login-shell" data-login>
+        <div class="login-panel">
+          <div class="login-card">
+            <a class="login-wordmark" href="/" aria-label="Fraeno home">fraeno</a>
+            <h1>Admin Login</h1>
+            <p class="muted login-intro">Sign in to access the admin dashboard</p>
+            <form data-login-form>
+              <label for="admin-email">Email Address</label>
+              <input
+                id="admin-email"
+                name="email"
+                type="email"
+                autocomplete="username"
+                placeholder="admin@deepubuntu.com"
+                required
+              />
+              <div class="password-heading">
+                <label for="admin-password">Password</label>
+                <button class="reset-button" type="button" data-password-reset disabled>
+                  Forgot password?
+                </button>
+              </div>
+              <input
+                id="admin-password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="••••••••"
+                required
+              />
+              <button
+                class="primary-button auth-button"
+                type="submit"
+                data-email-sign-in
+                disabled
+              >
+                Sign In with Email
+              </button>
+            </form>
+
+            <div class="auth-divider" aria-hidden="true">
+              <span>Or continue with</span>
+            </div>
+
+            <button class="google-button" type="button" data-google-sign-in disabled>
+              <span class="google-mark" aria-hidden="true">G</span>
+              Sign In with Google
+            </button>
+
+            <p class="form-message login-message" data-login-message aria-live="polite"></p>
+            <a class="back-link" href="/">← Back to Home</a>
+          </div>
+          <p class="security-notice">Admin access only • Unauthorized access is monitored</p>
+        </div>
+      </section>
+
+      <section class="dashboard" data-dashboard hidden>
+        <div class="dashboard-title">
+          <div>
+            <p class="eyebrow">Customer and entitlement layer</p>
+            <h1>Fraeno at a glance</h1>
+          </div>
+          <button class="text-button" data-refresh>Refresh</button>
+        </div>
+
+        <p class="status-line" data-status aria-live="polite">Loading live records</p>
+
+        <div class="metric-grid" data-metrics></div>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Product accounts</p>
+              <h2>GitHub installations</h2>
+            </div>
+            <p class="muted">The installation ID is the customer key.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Account</th>
+                  <th>Installation</th>
+                  <th>Product status</th>
+                  <th>Checks this month</th>
+                  <th>Last active</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody data-installations></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Access requests and waitlist</p>
+              <h2>Leads</h2>
+            </div>
+            <p class="muted">Requests and physics waitlist signups from fraeno.com.</p>
+          </div>
+          <div class="lead-grid" data-leads></div>
+        </section>
+      </section>
+    </main>
+
+    <dialog data-entitlement-dialog>
+      <form class="entitlement-form" data-entitlement-form method="dialog">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">Manual control</p>
+            <h2 data-entitlement-title>Entitlement</h2>
+          </div>
+          <button
+            class="close-button"
+            type="button"
+            data-entitlement-close
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+        <input name="installation_id" type="hidden" />
+        <div class="form-grid">
+          <label>
+            Status
+            <select name="status" required>
+              <option value="trial">Trial</option>
+              <option value="active">Active</option>
+              <option value="grace">Grace</option>
+              <option value="suspended">Suspended</option>
+              <option value="expired">Expired</option>
+            </select>
+          </label>
+          <label>
+            Plan
+            <input name="plan" value="private_beta" required />
+          </label>
+          <label>
+            Source
+            <select name="source" required>
+              <option value="manual">Manual</option>
+              <option value="stripe">Stripe</option>
+              <option value="marketplace">Marketplace</option>
+            </select>
+          </label>
+          <label>
+            Billing
+            <select name="billing_status" required>
+              <option value="unpaid">Unpaid</option>
+              <option value="paid">Paid</option>
+              <option value="comped">Comped</option>
+            </select>
+          </label>
+          <label>
+            Ends at
+            <input name="ends_at" type="datetime-local" />
+          </label>
+          <label>
+            Grace ends at
+            <input name="grace_ends_at" type="datetime-local" />
+          </label>
+        </div>
+        <label>
+          Reason
+          <textarea name="note" rows="3" minlength="10" required></textarea>
+        </label>
+        <p class="form-message" data-entitlement-message aria-live="polite"></p>
+        <button
+          class="primary-button"
+          type="submit"
+          value="save"
+          data-entitlement-save
+        >
+          Save entitlement
+        </button>
+      </form>
+    </dialog>
+
+    <script type="module" src="/admin/admin.js?v=20260817a"></script>
+  </body>
+</html>
