@@ -1,2 +1,0 @@
-# www is an alias; one indexable host keeps search engines on the canonical URLs.
-https://www.fraeno.com/* https://fraeno.com/:splat 301
