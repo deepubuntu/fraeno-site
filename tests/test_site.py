@@ -63,7 +63,8 @@ def test_site_has_expected_identity_and_local_assets() -> None:
     for target in parser.links:
         if target.startswith("/") and target != "/":
             asset_path = urlsplit(target).path.removeprefix("/")
-            assert (SITE / asset_path).is_file(), target
+            # Cloudflare Pages serves /privacy for privacy.html, so clean URLs resolve too.
+            assert (SITE / asset_path).is_file() or (SITE / f"{asset_path}.html").is_file(), target
 
 
 def test_site_preserves_approved_product_copy() -> None:
@@ -495,11 +496,15 @@ def test_site_ships_discovery_and_privacy_furniture() -> None:
     privacy = (SITE / "privacy.html").read_text()
     styles = (SITE / "styles.css").read_text()
 
-    assert 'href="/privacy.html"' in page
+    assert 'href="/privacy"' in page
+    assert 'href="/privacy.html"' not in page
     assert "ai-train=no" in robots
     assert "Sitemap: https://fraeno.com/sitemap.xml" in robots
     assert "Disallow: /api/" in robots
-    assert "https://fraeno.com/privacy.html" in sitemap
+    assert "https://fraeno.com/privacy</loc>" in sitemap
+    assert "privacy.html" not in sitemap
+    assert 'rel="canonical" href="https://fraeno.com/privacy"' in privacy
+    assert "https://www.fraeno.com/* https://fraeno.com/:splat 301" in (SITE / "_redirects").read_text()
     assert "https://fraeno.com/" in llms
     assert "sets no" in privacy and "cookies" in privacy
     assert "legal-wordmark" in privacy
