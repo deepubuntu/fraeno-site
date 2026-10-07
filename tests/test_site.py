@@ -504,7 +504,7 @@ def test_site_ships_discovery_and_privacy_furniture() -> None:
     assert "https://fraeno.com/privacy</loc>" in sitemap
     assert "privacy.html" not in sitemap
     assert 'rel="canonical" href="https://fraeno.com/privacy"' in privacy
-    middleware = (SITE / "functions" / "_middleware.js").read_text()
+    middleware = (SITE.parent / "functions" / "_middleware.js").read_text()
     assert 'url.hostname === "www.fraeno.com"' in middleware
     assert "Response.redirect(url.toString(), 301)" in middleware
     assert "https://fraeno.com/" in llms
