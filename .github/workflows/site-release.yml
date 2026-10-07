@@ -104,9 +104,26 @@ jobs:
             fi
             curl \
               --fail \
+              --location \
               --silent \
               --show-error \
               "https://${host}/?commit=${COMMIT_SHA}" |
               grep --fixed-strings \
                 "Fraeno catches software changes that make robots behave dangerously."
           done
+          # www is an alias: it must send visitors to the canonical host.
+          location="$(
+            curl \
+              --silent \
+              --show-error \
+              --output /dev/null \
+              --write-out '%{http_code} %{redirect_url}' \
+              "https://www.fraeno.com/?commit=${COMMIT_SHA}"
+          )"
+          case "$location" in
+            "301 https://fraeno.com/?commit=${COMMIT_SHA}") ;;
+            *)
+              echo "www.fraeno.com did not redirect to fraeno.com: ${location}"
+              exit 1
+              ;;
+          esac
